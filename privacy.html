@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مِعْيَار — سياسة الخصوصية</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #09090B;
+            --bg-card: #18181B;
+            --accent: #6366F1;
+            --accent-light: #818CF8;
+            --text: #FAFAFA;
+            --text-muted: #A1A1AA;
+            --border: rgba(255,255,255,0.06);
+            --success: #22C55E;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.9;
+            min-height: 100vh;
+        }
+        .legal-nav {
+            position: fixed; top: 0; right: 0; left: 0; z-index: 100;
+            background: rgba(9,9,11,0.9); backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 32px;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .legal-nav a { color: var(--accent-light); text-decoration: none; font-weight: 500; }
+        .legal-nav a:hover { text-decoration: underline; }
+        .legal-logo { font-size: 1.3em; font-weight: 700; color: var(--text); }
+        .legal-container {
+            max-width: 800px; margin: 0 auto;
+            padding: 100px 24px 80px;
+        }
+        h1 {
+            font-size: 2em; font-weight: 700;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, var(--accent-light), var(--accent));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .subtitle { color: var(--text-muted); margin-bottom: 40px; font-size: 0.95em; }
+        h2 {
+            font-size: 1.3em; font-weight: 600; color: var(--text);
+            margin: 36px 0 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+        h2 .num { color: var(--accent-light); font-weight: 700; margin-left: 8px; }
+        p, li { color: var(--text-muted); margin-bottom: 12px; font-size: 0.95em; }
+        ul { padding-right: 24px; margin-bottom: 16px; }
+        li { margin-bottom: 6px; }
+        .highlight { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin: 24px 0; }
+        .highlight strong { color: var(--accent-light); }
+        .privacy-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3);
+            color: var(--success); padding: 12px 20px; border-radius: 10px;
+            font-weight: 600; font-size: 1em; margin: 16px 0;
+        }
+        .page-links {
+            display: flex; gap: 16px; flex-wrap: wrap;
+            margin-top: 48px; padding-top: 24px;
+            border-top: 1px solid var(--border);
+        }
+        .page-links a {
+            color: var(--accent-light); text-decoration: none;
+            padding: 8px 16px; border: 1px solid var(--border);
+            border-radius: 8px; font-size: 0.9em;
+            transition: all 0.2s;
+        }
+        .page-links a:hover { background: rgba(99,102,241,0.1); border-color: var(--accent); }
+        footer {
+            text-align: center; padding: 32px;
+            color: var(--text-muted); font-size: 0.85em;
+            border-top: 1px solid var(--border);
+        }
+    </style>
+</head>
+<body>
+
+<nav class="legal-nav">
+    <span class="legal-logo">&#9878; مِعْيَار</span>
+    <a href="index.html">&#8592; العودة للرئيسية</a>
+</nav>
+
+<div class="legal-container">
+
+    <h1>سياسة الخصوصية</h1>
+    <p class="subtitle">آخر تحديث: مارس 2026</p>
+
+    <div class="privacy-badge">
+        &#128274; مِعْيَار يعمل بالكامل على جهازك — بياناتك لا تغادر حاسوبك أبداً
+    </div>
+
+    <h2><span class="num">1.</span> مبدأ الخصوصية</h2>
+    <p>مِعْيَار مصمم وفق مبدأ <strong>"الخصوصية أولاً"</strong>. التطبيق يعمل بالكامل محلياً على جهاز المستخدم دون الحاجة لأي اتصال بالإنترنت أثناء الاستخدام. هذا يعني:</p>
+    <ul>
+        <li>لا نجمع أي بيانات شخصية أثناء استخدام البرنامج</li>
+        <li>لا نرسل استفساراتك القانونية لأي خادم خارجي</li>
+        <li>لا نسجل أو نتتبع استخدامك للبرنامج</li>
+        <li>نموذج الذكاء الاصطناعي يعمل محلياً على جهازك</li>
+    </ul>
+
+    <h2><span class="num">2.</span> البيانات التي نجمعها</h2>
+
+    <h3 style="color: var(--text); font-size: 1.1em; margin: 20px 0 12px;">عند الشراء:</h3>
+    <ul>
+        <li>البريد الإلكتروني (لإرسال مفتاح الترخيص)</li>
+        <li>معلومات الدفع (تتم عبر بوابة الدفع ولا نحتفظ بها)</li>
+        <li>معرّف الجهاز (لربط الترخيص بجهاز المستخدم)</li>
+    </ul>
+
+    <h3 style="color: var(--text); font-size: 1.1em; margin: 20px 0 12px;">أثناء الاستخدام:</h3>
+    <div class="highlight">
+        <strong>لا نجمع أي بيانات أثناء الاستخدام.</strong>
+        <p style="margin-top: 8px;">جميع الاستفسارات والوثائق والمذكرات تبقى حصرياً على جهازك. لا يتم إرسال أي شيء عبر الإنترنت.</p>
+    </div>
+
+    <h2><span class="num">3.</span> تخزين البيانات</h2>
+    <p>جميع بياناتك تُخزّن محلياً على جهازك في المجلدات التالية:</p>
+    <ul>
+        <li>قاعدة بيانات المستخدم: مجلد التطبيق المحلي</li>
+        <li>القضايا والمذكرات: مجلد التطبيق المحلي</li>
+        <li>ملف الترخيص: مجلد المستخدم الشخصي</li>
+    </ul>
+    <p>لا نملك أي وصول لهذه البيانات ولا نستطيع الوصول إليها.</p>
+
+    <h2><span class="num">4.</span> الاتصال بالإنترنت</h2>
+    <p>البرنامج لا يحتاج للإنترنت أثناء الاستخدام. الحالات الوحيدة التي قد يتصل فيها بالإنترنت:</p>
+    <ul>
+        <li><strong>تفعيل الترخيص:</strong> عملية لمرة واحدة عند إدخال مفتاح الترخيص</li>
+        <li><strong>التحقق من الإلغاء:</strong> فحص دوري اختياري (غير مطلوب للعمل)</li>
+        <li><strong>التحديثات:</strong> عند توفر تحديث جديد (اختياري)</li>
+    </ul>
+
+    <h2><span class="num">5.</span> مشاركة البيانات مع أطراف ثالثة</h2>
+    <p>لا نشارك أي بيانات مع أي طرف ثالث. ولا نبيع أو نؤجر أو ننقل أي معلومات شخصية.</p>
+
+    <h2><span class="num">6.</span> أمان البيانات</h2>
+    <ul>
+        <li>مفتاح الترخيص مُشفّر بخوارزمية RSA-2048</li>
+        <li>قاعدة البيانات المحلية محمية</li>
+        <li>لا يوجد اتصال خارجي أثناء الاستخدام العادي</li>
+    </ul>
+
+    <h2><span class="num">7.</span> حقوق المستخدم</h2>
+    <p>يحق للمستخدم في أي وقت:</p>
+    <ul>
+        <li>حذف جميع بياناته بحذف مجلد التطبيق</li>
+        <li>طلب حذف بيانات الشراء بالتواصل مع الدعم</li>
+        <li>إلغاء تفعيل الترخيص</li>
+    </ul>
+
+    <h2><span class="num">8.</span> التعديلات</h2>
+    <p>نحتفظ بحق تعديل سياسة الخصوصية. سيتم إشعار المستخدمين بأي تغييرات جوهرية عبر البريد الإلكتروني أو عبر التطبيق.</p>
+
+    <h2><span class="num">9.</span> التواصل</h2>
+    <p>لأي استفسارات تتعلق بالخصوصية:</p>
+    <ul>
+        <li>البريد الإلكتروني: privacy@meyar.sa</li>
+    </ul>
+
+    <div class="page-links">
+        <a href="terms.html">شروط الاستخدام</a>
+        <a href="index.html">الصفحة الرئيسية</a>
+    </div>
+
+</div>
+
+<footer>
+    &copy; 2026 مِعْيَار — جميع الحقوق محفوظة
+</footer>
+
+</body>
+</html>
