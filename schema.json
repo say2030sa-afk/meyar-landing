@@ -1,0 +1,21 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "مِعْيَار - Me'yar",
+  "description": "المستشار القانوني الذكي — جميع الأنظمة السعودية بين يديك",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Windows, macOS",
+  "offers": {
+    "@type": "AggregateOffer",
+    "lowPrice": "100",
+    "highPrice": "500",
+    "priceCurrency": "SAR",
+    "offerCount": "3"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "شركة ثقة الرؤية لتقنية المعلومات",
+    "url": "https://meyar.ai"
+  },
+  "inLanguage": "ar"
+}

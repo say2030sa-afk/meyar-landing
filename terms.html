@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"><script>if(localStorage.getItem('meyar-mode')==='dark')document.documentElement.classList.add('dark')</script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شروط الاستخدام — مِعْيَار</title>
+    <meta name="description" content="شروط وأحكام استخدام منصة مِعْيَار للاستشارات القانونية الذكية — شركة ثقة الرؤية لتقنية المعلومات">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Ctext y='32' font-size='32'%3E%E2%9A%96%EF%B8%8F%3C/text%3E%3C/svg%3E">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        :root{
+            --bg:#fbfbfd;--bg2:#f5f5f7;--card:#ffffff;
+            --border:rgba(0,0,0,0.06);--text:#1d1d1f;--muted:#6e6e73;--muted2:#86868b;
+            --accent:#6366F1;--accent2:#818CF8;
+            --font:'IBM Plex Sans Arabic','SF Pro Display',sans-serif;
+            --bg-card:#ffffff;--bg-elevated:#f5f5f7;
+            --text-muted:#6e6e73;--text-dim:#86868b;
+            --border-accent:rgba(99,102,241,0.15);
+            --shadow-glow:0 0 40px rgba(99,102,241,0.08);
+            --shadow-lg:0 20px 60px rgba(0,0,0,0.06);
+            --radius-sm:8px;--radius-md:12px;--radius-lg:16px;--radius-xl:20px;
+            --transition:all 0.3s ease;
+            --accent-light:#6366F1;
+        }
+        html.dark{
+            --bg:#000;--bg2:#0a0a0a;--card:#111;
+            --border:rgba(255,255,255,0.08);--text:#f5f5f7;--muted:#86868b;--muted2:#6e6e73;
+            --bg-card:#111;--bg-elevated:#0a0a0a;
+            --text-muted:#86868b;--text-dim:#6e6e73;
+            --border-accent:rgba(99,102,241,0.3);
+            --shadow-glow:0 0 40px rgba(99,102,241,0.15);
+            --shadow-lg:0 20px 60px rgba(0,0,0,0.5);
+            --accent-light:#818CF8;
+        }
+        html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+        body{font-family:var(--font);background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.8}
+        a{color:var(--accent);text-decoration:none;transition:color 0.3s}
+        a:hover{color:var(--accent2)}
+        .container{max-width:900px;margin:0 auto;padding:0 24px}
+
+        /* Noise overlay */
+        body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:0.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+        /* ═══ NAV ═══ */
+        .nav{position:sticky;top:0;z-index:999;background:rgba(255,255,255,0.72);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border-bottom:1px solid rgba(0,0,0,0.06);padding:14px 0}
+        html.dark .nav{background:rgba(0,0,0,0.85);border-bottom-color:rgba(255,255,255,0.06)}
+        .nav .container{display:flex;align-items:center;justify-content:space-between}
+        .nav-right{display:flex;align-items:center;gap:12px}
+        .nav-logo{display:flex;align-items:center;gap:8px;font-size:16px;font-weight:700;color:var(--text);text-decoration:none}
+        .nav-bars{display:flex;gap:3px;align-items:flex-end;height:18px}
+        .nav-bars span{width:4px;border-radius:2px;background:linear-gradient(180deg,var(--accent),#22D3EE)}
+        .nav-bars span:nth-child(1){height:50%}
+        .nav-bars span:nth-child(2){height:100%}
+        .nav-bars span:nth-child(3){height:70%}
+        .nav-back{display:inline-flex;align-items:center;gap:6px;color:var(--muted);font-size:13px;font-weight:500;padding:6px 14px;border-radius:8px;border:1px solid var(--border);transition:all 0.3s}
+        .nav-back:hover{color:var(--text);border-color:var(--accent);background:rgba(99,102,241,0.06)}
+        .nav-back svg{width:14px;height:14px}
+
+        /* Theme toggle */
+        .theme-toggle{background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);border-radius:100px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.3s;font-size:16px;line-height:1;padding:0;color:var(--text)}
+        .theme-toggle:hover{background:rgba(99,102,241,0.15);border-color:rgba(99,102,241,0.3)}
+        html.dark .theme-toggle{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.1)}
+
+        /* ═══ HERO HEADER ═══ */
+        .terms-hero{padding:80px 0 48px;text-align:center;position:relative}
+        .terms-hero::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:600px;height:300px;background:radial-gradient(ellipse,rgba(99,102,241,0.08),transparent 70%);pointer-events:none}
+        .terms-hero h1{font-size:clamp(2rem,5vw,2.8rem);font-weight:700;margin-bottom:12px;background:linear-gradient(135deg,var(--text) 0%,var(--accent) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+        .terms-hero .subtitle{font-size:15px;color:var(--muted);margin-bottom:8px}
+        .terms-meta{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-top:20px;font-size:13px;color:var(--muted2)}
+        .terms-meta span{display:inline-flex;align-items:center;gap:6px}
+        .terms-meta svg{width:14px;height:14px;opacity:0.6}
+
+        /* ═══ TABLE OF CONTENTS ═══ */
+        .toc{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px 32px;margin-bottom:48px}
+        .toc-title{font-size:14px;font-weight:700;color:var(--accent);margin-bottom:14px;letter-spacing:0.5px}
+        .toc-list{list-style:none;columns:2;column-gap:24px}
+        .toc-list li{padding:5px 0;break-inside:avoid}
+        .toc-list a{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:6px;transition:all 0.2s}
+        .toc-list a:hover{color:var(--accent);transform:translateX(-4px)}
+        .toc-list .num{font-weight:700;color:var(--accent);font-size:12px;min-width:22px}
+
+        /* ═══ SECTIONS ═══ */
+        .terms-section{margin-bottom:40px;padding:32px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);transition:all 0.3s}
+        .terms-section:hover{border-color:var(--border-accent);box-shadow:var(--shadow-glow)}
+        .section-header{display:flex;align-items:center;gap:12px;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--border)}
+        .section-num{width:32px;height:32px;border-radius:10px;background:rgba(99,102,241,0.1);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--accent);flex-shrink:0}
+        .section-header h2{font-size:18px;font-weight:700;color:var(--text)}
+        .terms-section p{font-size:14px;color:var(--muted);line-height:2;margin-bottom:12px}
+        .terms-section p:last-child{margin-bottom:0}
+        .terms-section ul,.terms-section ol{padding-right:20px;margin-bottom:12px}
+        .terms-section li{font-size:14px;color:var(--muted);line-height:2;margin-bottom:4px}
+        .terms-section strong{color:var(--text);font-weight:600}
+
+        /* Highlight box */
+        .highlight-box{background:rgba(99,102,241,0.06);border:1px solid rgba(99,102,241,0.15);border-radius:var(--radius-md);padding:16px 20px;margin:16px 0;font-size:13px;line-height:1.9;color:var(--muted)}
+        .highlight-box.warning{background:rgba(245,158,11,0.06);border-color:rgba(245,158,11,0.2)}
+        .highlight-box.warning strong{color:#D97706}
+
+        /* Tiers table */
+        .tiers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}
+        .tier-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-md);padding:16px;text-align:center;transition:all 0.3s}
+        .tier-card:hover{border-color:var(--border-accent)}
+        .tier-name{font-size:15px;font-weight:700;color:var(--accent);margin-bottom:4px}
+        .tier-desc{font-size:12px;color:var(--muted2)}
+
+        /* ═══ FOOTER ═══ */
+        .footer{padding:40px 0;border-top:1px solid var(--border);text-align:center}
+        .footer-content{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+        .footer-text{font-size:0.85rem;color:var(--text-dim)}
+        .footer-links{display:flex;gap:24px;list-style:none}
+        .footer-links a{font-size:0.85rem;color:var(--text-dim)}
+        .footer-links a:hover{color:var(--text)}
+
+        /* ═══ RESPONSIVE ═══ */
+        @media(max-width:768px){
+            .container{padding:0 16px}
+            .terms-hero{padding:60px 0 32px}
+            .toc-list{columns:1}
+            .tiers-grid{grid-template-columns:1fr}
+            .terms-section{padding:24px 20px}
+            .footer-content{flex-direction:column;text-align:center}
+            .footer-links{flex-wrap:wrap;justify-content:center}
+            .terms-meta{flex-direction:column;gap:8px}
+        }
+
+        /* ═══ SCROLL PROGRESS ═══ */
+        #scrollProgress{position:fixed;top:0;left:0;height:2px;z-index:10001;background:linear-gradient(90deg,var(--accent),#22D3EE);width:0%;transition:width 0.1s}
+    </style>
+</head>
+<body>
+
+<div id="scrollProgress"></div>
+
+<!-- ═══════════════ NAV ═══════════════ -->
+<nav class="nav">
+    <div class="container">
+        <a href="index.html" class="nav-logo">
+            <div class="nav-bars"><span></span><span></span><span></span></div>
+            <span>مِعْيَار</span>
+        </a>
+        <div class="nav-right">
+            <a href="index.html" class="nav-back">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                الصفحة الرئيسية
+            </a>
+            <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="تبديل الوضع">
+                <svg id="themeIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<header class="terms-hero">
+    <div class="container">
+        <h1>شروط وأحكام الاستخدام</h1>
+        <p class="subtitle">مِعْيَار — شركة ثقة الرؤية لتقنية المعلومات — المملكة العربية السعودية</p>
+        <div class="terms-meta">
+            <span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                تاريخ السريان: 2 أبريل 2026
+            </span>
+            <span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                آخر تحديث: 2 أبريل 2026
+            </span>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+
+    <!-- ═══════════════ TABLE OF CONTENTS ═══════════════ -->
+    <div class="toc">
+        <div class="toc-title">فهرس المحتويات</div>
+        <ol class="toc-list">
+            <li><a href="#s1"><span class="num">01</span> تعريفات ومقدمة</a></li>
+            <li><a href="#s2"><span class="num">02</span> وصف الخدمة</a></li>
+            <li><a href="#s3"><span class="num">03</span> إخلاء المسؤولية القانونية</a></li>
+            <li><a href="#s4"><span class="num">04</span> باقات الاشتراك</a></li>
+            <li><a href="#s5"><span class="num">05</span> شروط الترخيص</a></li>
+            <li><a href="#s6"><span class="num">06</span> مسؤوليات المستخدم</a></li>
+            <li><a href="#s7"><span class="num">07</span> الملكية الفكرية</a></li>
+            <li><a href="#s8"><span class="num">08</span> حدود المسؤولية</a></li>
+            <li><a href="#s9"><span class="num">09</span> شروط الدفع والاسترداد</a></li>
+            <li><a href="#s10"><span class="num">10</span> إنهاء الحساب</a></li>
+            <li><a href="#s11"><span class="num">11</span> القانون الحاكم والاختصاص القضائي</a></li>
+            <li><a href="#s12"><span class="num">12</span> حل النزاعات</a></li>
+            <li><a href="#s13"><span class="num">13</span> القوة القاهرة</a></li>
+            <li><a href="#s14"><span class="num">14</span> التعديلات على الشروط</a></li>
+            <li><a href="#s15"><span class="num">15</span> التواصل والدعم</a></li>
+        </ol>
+    </div>
+
+    <!-- ═══════════════ SECTION 1 ═══════════════ -->
+    <section class="terms-section" id="s1">
+        <div class="section-header">
+            <div class="section-num">01</div>
+            <h2>تعريفات ومقدمة</h2>
+        </div>
+        <p>تحكم هذه الشروط والأحكام ("الاتفاقية") استخدامك لمنتج <strong>مِعْيَار</strong> المقدّم من <strong>شركة ثقة الرؤية لتقنية المعلومات</strong>، شركة سعودية مسجّلة في المملكة العربية السعودية ("الشركة" أو "نحن").</p>
+        <p>باستخدامك للمنتج أو تثبيته أو الوصول إليه، فإنك توافق على الالتزام بجميع الشروط الواردة في هذه الاتفاقية. إذا كنت لا توافق على أي من هذه الشروط، يُرجى عدم استخدام المنتج.</p>
+        <p>في هذه الاتفاقية، تعني المصطلحات التالية:</p>
+        <ul>
+            <li><strong>"المنتج"</strong> أو <strong>"مِعْيَار"</strong>: تطبيق سطح المكتب والخدمات المرتبطة به للاستشارات القانونية الذكية.</li>
+            <li><strong>"المستخدم"</strong> أو <strong>"أنت"</strong>: أي شخص طبيعي أو اعتباري يستخدم المنتج.</li>
+            <li><strong>"الترخيص"</strong>: الحق المحدود وغير الحصري في استخدام المنتج وفقاً لهذه الشروط.</li>
+            <li><strong>"مفتاح الترخيص"</strong>: الرمز الفريد الذي يتم تفعيل المنتج من خلاله.</li>
+        </ul>
+    </section>
+
+    <!-- ═══════════════ SECTION 2 ═══════════════ -->
+    <section class="terms-section" id="s2">
+        <div class="section-header">
+            <div class="section-num">02</div>
+            <h2>وصف الخدمة</h2>
+        </div>
+        <p>مِعْيَار هو تطبيق ذكاء اصطناعي متخصص في الأنظمة واللوائح السعودية، يعمل كأداة مساعدة للبحث والاستشارة القانونية. يتضمن المنتج:</p>
+        <ul>
+            <li>قاعدة بيانات شاملة تضم أكثر من <strong>175 نظاماً سعودياً</strong> وأكثر من <strong>7,000 مادة قانونية</strong>.</li>
+            <li>محرك ذكاء اصطناعي مدمج يعمل محلياً على جهاز المستخدم بدون الحاجة للاتصال بالإنترنت أثناء الاستخدام.</li>
+            <li>نظام بحث دلالي متقدم باستخدام تقنيات التضمين اللغوي (Embeddings).</li>
+            <li>واجهة استخدام عربية متكاملة مصممة للمتخصصين القانونيين.</li>
+        </ul>
+    </section>
+
+    <!-- ═══════════════ SECTION 3 ═══════════════ -->
+    <section class="terms-section" id="s3">
+        <div class="section-header">
+            <div class="section-num">03</div>
+            <h2>إخلاء المسؤولية القانونية</h2>
+        </div>
+        <div class="highlight-box warning">
+            <strong>تنبيه مهم:</strong> مِعْيَار هو أداة مساعدة تقنية وليس بديلاً عن المحامي المرخّص أو المستشار القانوني المؤهل. جميع المخرجات والإجابات المقدمة من المنتج هي لأغراض مرجعية واسترشادية فقط ولا تُعتبر استشارة قانونية رسمية.
+        </div>
+        <p>يُقرّ المستخدم ويوافق على ما يلي:</p>
+        <ul>
+            <li>أن مخرجات المنتج قد لا تعكس أحدث التعديلات التشريعية أو التفسيرات القضائية.</li>
+            <li>أن المنتج يعمل بتقنية الذكاء الاصطناعي التي قد تنتج معلومات غير دقيقة في بعض الحالات.</li>
+            <li>أنه يتحمل المسؤولية الكاملة عن أي قرارات يتخذها بناءً على مخرجات المنتج.</li>
+            <li>أنه يجب الرجوع إلى محامٍ مرخّص للحصول على استشارة قانونية ملزمة.</li>
+        </ul>
+    </section>
+
+    <!-- ═══════════════ SECTION 4 ═══════════════ -->
+    <section class="terms-section" id="s4">
+        <div class="section-header">
+            <div class="section-num">04</div>
+            <h2>باقات الاشتراك</h2>
+        </div>
+        <p>يتوفر المنتج في ثلاث باقات اشتراك، تختلف في قدرات نموذج الذكاء الاصطناعي المضمّن:</p>
+        <div class="tiers-grid">
+            <div class="tier-card">
+                <div class="tier-name">Air</div>
+                <div class="tier-desc">النموذج الخفيف — للبحث السريع</div>
+            </div>
+            <div class="tier-card">
+                <div class="tier-name">Plus</div>
+                <div class="tier-desc">النموذج المتقدم — للاستخدام المهني</div>
+            </div>
+            <div class="tier-card">
+                <div class="tier-name">Pro</div>
+                <div class="tier-desc">النموذج الاحترافي — للتحليل المعمّق</div>
+            </div>
+        </div>
+        <p>تفاصيل كل باقة ومميزاتها وأسعارها متاحة على صفحة الباقات في الموقع الرسمي. تحتفظ الشركة بحقها في تعديل الباقات أو إضافة باقات جديدة في أي وقت.</p>
+    </section>
+
+    <!-- ═══════════════ SECTION 5 ═══════════════ -->
+    <section class="terms-section" id="s5">
+        <div class="section-header">
+            <div class="section-num">05</div>
+            <h2>شروط الترخيص</h2>
+        </div>
+        <p>يخضع استخدام المنتج لشروط الترخيص التالية:</p>
+        <ul>
+            <li><strong>مدة الترخيص:</strong> 365 يوماً من تاريخ التفعيل.</li>
+            <li><strong>جهاز واحد:</strong> يتم ربط مفتاح الترخيص بجهاز واحد فقط عند التفعيل الأول. لا يمكن نقل الترخيص إلى جهاز آخر إلا بموافقة مسبقة من الشركة.</li>
+            <li><strong>غير قابل للتحويل:</strong> لا يجوز بيع الترخيص أو تأجيره أو إعارته أو التنازل عنه لأي طرف ثالث.</li>
+            <li><strong>استخدام شخصي أو مؤسسي:</strong> يحق للمستخدم استخدام المنتج لأغراضه الشخصية أو المهنية وفقاً للباقة المختارة.</li>
+        </ul>
+        <p>عند انتهاء مدة الترخيص، يتوقف المنتج عن العمل تلقائياً. يمكن للمستخدم تجديد اشتراكه من خلال شراء ترخيص جديد.</p>
+    </section>
+
+    <!-- ═══════════════ SECTION 6 ═══════════════ -->
+    <section class="terms-section" id="s6">
+        <div class="section-header">
+            <div class="section-num">06</div>
+            <h2>مسؤوليات المستخدم</h2>
+        </div>
+        <p>يلتزم المستخدم بالآتي:</p>
+        <ul>
+            <li>المحافظة على سرية مفتاح الترخيص وعدم مشاركته مع أي شخص أو جهة أخرى.</li>
+            <li>عدم محاولة فك تشفير المنتج أو تفكيكه أو إجراء هندسة عكسية عليه بأي شكل من الأشكال.</li>
+            <li>عدم نسخ المنتج أو توزيعه أو إعادة إنتاجه جزئياً أو كلياً.</li>
+            <li>عدم استخدام المنتج في أي نشاط مخالف للأنظمة السعودية أو الأنظمة الدولية المعمول بها.</li>
+            <li>عدم محاولة التلاعب بنظام التحقق من الترخيص أو تجاوزه.</li>
+            <li>عدم استخدام مخرجات المنتج لأغراض تضليلية أو احتيالية.</li>
+            <li>الإبلاغ عن أي ثغرات أمنية أو مشكلات فنية يتم اكتشافها في المنتج.</li>
+        </ul>
+    </section>
+
+    <!-- ═══════════════ SECTION 7 ═══════════════ -->
+    <section class="terms-section" id="s7">
+        <div class="section-header">
+            <div class="section-num">07</div>
+            <h2>الملكية الفكرية</h2>
+        </div>
+        <p>جميع حقوق الملكية الفكرية المتعلقة بالمنتج محفوظة بالكامل لشركة ثقة الرؤية لتقنية المعلومات، وتشمل على سبيل المثال لا الحصر:</p>
+        <ul>
+            <li>الكود البرمجي والبنية التقنية للمنتج.</li>
+            <li>نماذج الذكاء الاصطناعي المدمجة وبياناتها التدريبية.</li>
+            <li>قاعدة البيانات القانونية المُهيكلة والمفهرسة.</li>
+            <li>واجهة المستخدم والتصميم المرئي والعلامة التجارية.</li>
+            <li>الخوارزميات والمنهجيات المستخدمة في معالجة البيانات القانونية.</li>
+        </ul>
+        <p>لا يمنح هذا الترخيص المستخدم أي حق ملكية على المنتج أو أي من مكوناته. يقتصر حق المستخدم على الاستخدام المحدود وفقاً لشروط هذه الاتفاقية.</p>
+        <div class="highlight-box">
+            النصوص القانونية السعودية الأصلية هي ملك عام وفقاً لأحكام الأنظمة ذات الصلة. إلا أن طريقة تنظيمها وتصنيفها ومعالجتها داخل المنتج تُعد ملكية فكرية خاصة بالشركة.
+        </div>
+    </section>
+
+    <!-- ═══════════════ SECTION 8 ═══════════════ -->
+    <section class="terms-section" id="s8">
+        <div class="section-header">
+            <div class="section-num">08</div>
+            <h2>حدود المسؤولية</h2>
+        </div>
+        <p>يُقدَّم المنتج "كما هو" (As Is) و"حسب التوفر" (As Available). لا تضمن الشركة ما يلي:</p>
+        <ul>
+            <li>دقة أو اكتمال أو حداثة المخرجات القانونية المقدمة من الذكاء الاصطناعي.</li>
+            <li>خلو المنتج من الأخطاء البرمجية أو الانقطاعات الفنية.</li>
+            <li>ملاءمة المنتج لأي غرض محدد يتجاوز ما هو موصوف في هذه الاتفاقية.</li>
+        </ul>
+        <p>في جميع الأحوال، لا تتجاوز مسؤولية الشركة الإجمالية تجاه المستخدم — سواء كانت تعاقدية أو تقصيرية — قيمة الاشتراك المدفوع من قبل المستخدم خلال الاثني عشر (12) شهراً السابقة لنشوء المطالبة.</p>
+        <p>لا تتحمل الشركة أي مسؤولية عن أي أضرار غير مباشرة أو تبعية أو عرضية أو خاصة أو عقابية، بما في ذلك خسارة الأرباح أو البيانات أو فرص العمل.</p>
+    </section>
+
+    <!-- ═══════════════ SECTION 9 ═══════════════ -->
+    <section class="terms-section" id="s9">
+        <div class="section-header">
+            <div class="section-num">09</div>
+            <h2>شروط الدفع والاسترداد</h2>
+        </div>
+        <p>تنطبق شروط الدفع التالية على جميع عمليات الشراء:</p>
+        <ul>
+            <li><strong>العملة:</strong> جميع الأسعار مقوّمة بالريال السعودي (SAR) ما لم يُذكر خلاف ذلك.</li>
+            <li><strong>منصة الدفع:</strong> تتم جميع عمليات الدفع عبر منصة Shopify الآمنة ووسائل الدفع المعتمدة.</li>
+            <li><strong>الفوترة:</strong> يتم إصدار فاتورة إلكترونية متوافقة مع متطلبات هيئة الزكاة والضريبة والجمارك.</li>
+            <li><strong>ضريبة القيمة المضافة:</strong> جميع الأسعار المعلنة شاملة لضريبة القيمة المضافة (15%) ما لم يُذكر خلاف ذلك.</li>
+        </ul>
+        <div class="highlight-box">
+            <strong>سياسة الاسترداد:</strong> يحق للمستخدم طلب استرداد كامل المبلغ خلال سبعة (7) أيام من تاريخ الشراء. بعد انقضاء هذه المدة أو بعد تفعيل مفتاح الترخيص (أيهما أسبق)، لا يحق للمستخدم استرداد المبلغ المدفوع، وذلك وفقاً لنظام التجارة الإلكترونية السعودي.
+        </div>
+    </section>
+
+    <!-- ═══════════════ SECTION 10 ═══════════════ -->
+    <section class="terms-section" id="s10">
+        <div class="section-header">
+            <div class="section-num">10</div>
+            <h2>إنهاء الحساب</h2>
+        </div>
+        <p>يجوز للشركة إنهاء أو تعليق ترخيص المستخدم في الحالات التالية:</p>
+        <ul>
+            <li>مخالفة أي من شروط هذه الاتفاقية.</li>
+            <li>مشاركة مفتاح الترخيص مع أطراف غير مصرح لها.</li>
+            <li>محاولة الهندسة العكسية أو التلاعب بالمنتج أو نظام الحماية.</li>
+            <li>استخدام المنتج في أنشطة غير مشروعة أو مخالفة للأنظمة.</li>
+            <li>عدم سداد المبالغ المستحقة في مواعيدها.</li>
+        </ul>
+        <p>عند إنهاء الترخيص، يفقد المستخدم حق الوصول إلى المنتج فوراً. لا يحق للمستخدم المطالبة باسترداد أي مبالغ في حال الإنهاء بسبب مخالفة الشروط.</p>
+        <p>يحق للمستخدم إنهاء استخدامه للمنتج في أي وقت بمجرد إلغاء تثبيت التطبيق من جهازه.</p>
+    </section>
+
+    <!-- ═══════════════ SECTION 11 ═══════════════ -->
+    <section class="terms-section" id="s11">
+        <div class="section-header">
+            <div class="section-num">11</div>
+            <h2>القانون الحاكم والاختصاص القضائي</h2>
+        </div>
+        <p>تخضع هذه الاتفاقية وتُفسَّر وفقاً لأنظمة المملكة العربية السعودية، بما في ذلك:</p>
+        <ul>
+            <li>نظام التجارة الإلكترونية الصادر بالمرسوم الملكي رقم (م/126) وتاريخ 7/11/1440هـ.</li>
+            <li>نظام التعاملات الإلكترونية.</li>
+            <li>نظام حماية البيانات الشخصية.</li>
+            <li>نظام مكافحة الجرائم المعلوماتية.</li>
+            <li>أي أنظمة ولوائح أخرى ذات صلة بالتقنية والتجارة الإلكترونية.</li>
+        </ul>
+        <p>تختص <strong>محاكم مدينة الرياض</strong> في المملكة العربية السعودية بالنظر في أي نزاع ينشأ عن هذه الاتفاقية أو يتعلق بها.</p>
+    </section>
+
+    <!-- ═══════════════ SECTION 12 ═══════════════ -->
+    <section class="terms-section" id="s12">
+        <div class="section-header">
+            <div class="section-num">12</div>
+            <h2>حل النزاعات</h2>
+        </div>
+        <p>في حال نشوء أي نزاع بين الأطراف، يتم اتباع الإجراءات التالية بالتسلسل:</p>
+        <ol>
+            <li><strong>التسوية الودية:</strong> يسعى الطرفان لحل النزاع ودياً خلال ثلاثين (30) يوماً من تاريخ إخطار أحد الطرفين للآخر بوجود النزاع.</li>
+            <li><strong>الوساطة:</strong> في حال تعذر التسوية الودية، يتم إحالة النزاع إلى وسيط مؤهل يتفق عليه الطرفان.</li>
+            <li><strong>التقاضي:</strong> في حال فشل الوساطة، يحق لأي طرف اللجوء إلى المحاكم المختصة في مدينة الرياض.</li>
+        </ol>
+        <p>يستمر العمل بأحكام هذه الاتفاقية خلال فترة حل النزاع ما لم تصدر المحكمة المختصة أمراً بخلاف ذلك.</p>
+    </section>
+
+    <!-- ═══════════════ SECTION 13 ═══════════════ -->
+    <section class="terms-section" id="s13">
+        <div class="section-header">
+            <div class="section-num">13</div>
+            <h2>القوة القاهرة</h2>
+        </div>
+        <p>لا يتحمل أي طرف المسؤولية عن التأخير أو الإخفاق في أداء التزاماته بموجب هذه الاتفاقية إذا كان ذلك ناتجاً عن ظروف خارجة عن إرادته المعقولة، بما في ذلك على سبيل المثال لا الحصر:</p>
+        <ul>
+            <li>الكوارث الطبيعية والأوبئة.</li>
+            <li>الحروب والنزاعات المسلحة والاضطرابات المدنية.</li>
+            <li>القرارات الحكومية والتغييرات التشريعية المفاجئة.</li>
+            <li>انقطاع شبكات الاتصال أو الكهرباء على نطاق واسع.</li>
+            <li>الهجمات السيبرانية واسعة النطاق.</li>
+        </ul>
+        <p>يجب على الطرف المتأثر إخطار الطرف الآخر خلال فترة معقولة بوقوع حدث القوة القاهرة وبذل جهود معقولة للتخفيف من آثاره.</p>
+    </section>
+
+    <!-- ═══════════════ SECTION 14 ═══════════════ -->
+    <section class="terms-section" id="s14">
+        <div class="section-header">
+            <div class="section-num">14</div>
+            <h2>التعديلات على الشروط</h2>
+        </div>
+        <p>تحتفظ الشركة بحقها في تعديل هذه الشروط والأحكام في أي وقت. في حال إجراء تعديلات جوهرية:</p>
+        <ul>
+            <li>سيتم إشعار المستخدمين عبر البريد الإلكتروني المسجّل أو عبر إشعار داخل التطبيق قبل ثلاثين (30) يوماً على الأقل من تاريخ سريان التعديلات.</li>
+            <li>يُعتبر استمرار المستخدم في استخدام المنتج بعد تاريخ سريان التعديلات بمثابة قبول لها.</li>
+            <li>في حال عدم موافقة المستخدم على التعديلات، يحق له التوقف عن استخدام المنتج وطلب استرداد الجزء غير المستخدم من اشتراكه بشكل تناسبي.</li>
+        </ul>
+        <p>يتم نشر أي تعديلات على هذه الصفحة مع تحديث تاريخ "آخر تحديث".</p>
+    </section>
+
+    <!-- ═══════════════ SECTION 15 ═══════════════ -->
+    <section class="terms-section" id="s15">
+        <div class="section-header">
+            <div class="section-num">15</div>
+            <h2>التواصل والدعم</h2>
+        </div>
+        <p>للاستفسارات أو الملاحظات المتعلقة بهذه الشروط أو بالمنتج، يمكنكم التواصل معنا عبر:</p>
+        <ul>
+            <li><strong>البريد الإلكتروني:</strong> <a href="mailto:support@meyar.ai">support@meyar.ai</a></li>
+            <li><strong>الموقع الإلكتروني:</strong> <a href="https://meyar.ai">meyar.ai</a></li>
+        </ul>
+        <div class="highlight-box">
+            <strong>شركة ثقة الرؤية لتقنية المعلومات</strong><br>
+            المملكة العربية السعودية<br>
+            البريد الإلكتروني: support@meyar.ai
+        </div>
+        <p>نلتزم بالرد على جميع الاستفسارات خلال خمسة (5) أيام عمل من تاريخ استلامها.</p>
+    </section>
+
+</main>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-text">
+                &copy; 2026 مِعْيَار &mdash; شركة سعودية متخصصة في التقنية القانونية. جميع الحقوق محفوظة.
+            </div>
+            <ul class="footer-links">
+                <li><a href="terms.html">شروط الاستخدام</a></li>
+                <li><a href="privacy.html">سياسة الخصوصية</a></li>
+                <li><a href="mailto:support@meyar.ai">تواصل معنا</a></li>
+                <li><a href="index.html">الصفحة الرئيسية</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<script>
+// ═══ Theme Toggle ═══
+function toggleTheme(){
+    document.documentElement.classList.toggle('dark');
+    const isDark=document.documentElement.classList.contains('dark');
+    localStorage.setItem('meyar-mode',isDark?'dark':'light');
+    updateThemeIcon();
+}
+function updateThemeIcon(){
+    const isDark=document.documentElement.classList.contains('dark');
+    const icon=document.getElementById('themeIcon');
+    if(icon){
+        icon.innerHTML=isDark
+            ?'<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>'
+            :'<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+    }
+}
+updateThemeIcon();
+
+// ═══ Scroll Progress ═══
+window.addEventListener('scroll',()=>{
+    const sp=document.getElementById('scrollProgress');
+    if(sp) sp.style.width=(window.scrollY/(document.body.scrollHeight-window.innerHeight)*100)+'%';
+});
+
+// ═══ Smooth scroll for TOC links ═══
+document.querySelectorAll('.toc-list a').forEach(a=>{
+    a.addEventListener('click',e=>{
+        e.preventDefault();
+        const target=document.querySelector(a.getAttribute('href'));
+        if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
+    });
+});
+</script>
+
+</body>
+</html>
