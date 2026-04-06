@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحميل مِعْيَار — المستشار القانوني الذكي</title>
+    <meta name="description" content="حمّل مِعْيَار مجاناً — تجربة 30 يوم بجميع المميزات. يعمل على Windows و macOS.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Ctext y='32' font-size='32'%3E%E2%9A%96%EF%B8%8F%3C/text%3E%3C/svg%3E">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        :root{--bg:#0a0a0f;--card:#13131a;--card-border:#1e1e2e;--text:#e2e8f0;--muted:#94a3b8;--accent:#6366F1;--accent2:#818CF8;--cyan:#22D3EE;--green:#22c55e;--font:'IBM Plex Sans Arabic',sans-serif}
+        html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+        body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100vh}
+
+        /* Nav */
+        .nav{padding:20px 0;border-bottom:1px solid var(--card-border)}
+        .nav-inner{max-width:900px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+        .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text)}
+        .nav-logo span{font-size:20px;font-weight:700;letter-spacing:1px}
+        .nav-link{color:var(--muted);font-size:14px;text-decoration:none;transition:color 0.2s}
+        .nav-link:hover{color:var(--accent2)}
+
+        /* Hero */
+        .hero{text-align:center;padding:60px 24px 40px;max-width:700px;margin:0 auto}
+        .hero-badge{display:inline-block;background:linear-gradient(135deg,rgba(34,197,94,0.15),rgba(34,197,94,0.05));border:1px solid rgba(34,197,94,0.3);color:var(--green);font-size:13px;font-weight:600;padding:6px 20px;border-radius:50px;margin-bottom:24px}
+        .hero h1{font-size:36px;font-weight:800;margin-bottom:12px;background:linear-gradient(135deg,#fff,#94a3b8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        .hero p{color:var(--muted);font-size:16px;line-height:1.8}
+
+        /* Download Cards */
+        .download-section{max-width:700px;margin:0 auto;padding:0 24px 40px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+        .dl-card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:36px 24px;text-align:center;transition:border-color 0.3s,transform 0.2s}
+        .dl-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+        .dl-card-icon{margin-bottom:16px}
+        .dl-card h2{font-size:20px;font-weight:700;margin-bottom:6px}
+        .dl-card .dl-req{color:var(--muted);font-size:13px;margin-bottom:20px}
+        .dl-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:10px;font-family:var(--font);font-size:15px;font-weight:700;text-decoration:none;transition:opacity 0.2s}
+        .dl-btn:hover{opacity:0.85}
+        .dl-btn-win{background:linear-gradient(135deg,var(--accent),var(--cyan));color:#fff}
+        .dl-btn-mac{background:var(--card-border);color:var(--text)}
+        .dl-size{display:block;color:var(--muted);font-size:12px;margin-top:10px}
+
+        /* Coupon Section */
+        .coupon-section{max-width:700px;margin:0 auto;padding:0 24px 40px}
+        .coupon-box{background:linear-gradient(135deg,rgba(99,102,241,0.08),rgba(34,211,238,0.05));border:1px solid rgba(99,102,241,0.2);border-radius:16px;padding:28px;text-align:center}
+        .coupon-box h3{font-size:16px;font-weight:700;margin-bottom:6px;color:var(--accent2)}
+        .coupon-box p{color:var(--muted);font-size:13px;margin-bottom:14px}
+        .coupon-code{display:inline-block;background:var(--bg);border:2px dashed var(--accent);border-radius:10px;padding:12px 28px;font-family:'Courier New',monospace;font-size:22px;font-weight:800;letter-spacing:4px;color:#fff;direction:ltr;user-select:all}
+        .coupon-note{color:var(--green);font-size:12px;font-weight:600;margin-top:12px}
+
+        /* Steps */
+        .steps-section{max-width:700px;margin:0 auto;padding:0 24px 40px}
+        .steps-title{text-align:center;font-size:18px;font-weight:700;margin-bottom:20px;color:var(--accent2)}
+        .steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+        .step{background:var(--card);border:1px solid var(--card-border);border-radius:12px;padding:20px 12px;text-align:center}
+        .step-num{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--cyan));color:#fff;font-size:14px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;margin-bottom:10px}
+        .step strong{display:block;font-size:13px;margin-bottom:4px}
+        .step span{color:var(--muted);font-size:11px;line-height:1.6}
+
+        /* Features */
+        .features-section{max-width:700px;margin:0 auto;padding:0 24px 40px}
+        .features-box{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px}
+        .features-box h3{text-align:center;font-size:16px;font-weight:700;margin-bottom:16px;color:var(--text)}
+        .features-list{display:grid;grid-template-columns:1fr 1fr;gap:8px 16px}
+        .features-list span{color:var(--muted);font-size:13px;line-height:1.8}
+        .features-list span::before{content:"\2713 ";color:var(--green);font-weight:700}
+
+        /* After Trial Note */
+        .after-trial{max-width:700px;margin:0 auto;padding:0 24px 40px}
+        .after-trial-box{background:rgba(249,115,22,0.06);border:1px solid rgba(249,115,22,0.2);border-radius:12px;padding:20px 24px;text-align:center}
+        .after-trial-box h4{color:#f97316;font-size:14px;font-weight:700;margin-bottom:6px}
+        .after-trial-box p{color:var(--muted);font-size:13px;line-height:1.8}
+        .after-trial-box a{color:var(--accent2);text-decoration:underline}
+
+        /* Footer */
+        .footer{border-top:1px solid var(--card-border);padding:24px;text-align:center;margin-top:20px}
+        .footer-brand{font-size:18px;font-weight:800;letter-spacing:1px;margin-bottom:6px}
+        .footer p{color:var(--muted);font-size:11px;line-height:2}
+        .footer a{color:var(--accent2);text-decoration:none}
+
+        /* Privacy badge */
+        .privacy-badge{max-width:700px;margin:0 auto;padding:0 24px 40px}
+        .privacy-inner{background:var(--card);border:1px solid var(--card-border);border-radius:12px;padding:16px;text-align:center}
+        .privacy-inner p{color:var(--muted);font-size:12px;line-height:1.8}
+
+        @media(max-width:700px){
+            .hero h1{font-size:26px}
+            .download-section{grid-template-columns:1fr!important;max-width:400px!important}
+            .steps-grid{grid-template-columns:1fr 1fr}
+            .features-list{grid-template-columns:1fr}
+        }
+    </style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">
+            <svg width="28" height="28" viewBox="0 0 100 100"><defs><linearGradient id="lg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#22D3EE"/></linearGradient></defs><rect x="10" y="20" width="18" height="60" rx="5" fill="url(#lg)" opacity="0.6"/><rect x="38" y="8" width="20" height="84" rx="5" fill="url(#lg)"/><rect x="66" y="28" width="18" height="44" rx="5" fill="url(#lg)" opacity="0.6"/></svg>
+            <span>مِعْيَار</span>
+        </a>
+        <a href="/pricing" class="nav-link">الباقات والأسعار</a>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-badge">تجربة مجانية 30 يوم — جميع المميزات</div>
+    <h1>حمّل مِعْيَار مجاناً</h1>
+    <p>أول محرك ذكاء اصطناعي قانوني مدرّب على <strong style="color:#818cf8">388 نظاماً سعودياً</strong>.<br>يعمل محلياً على جهازك بخصوصية كاملة — لا يتطلب بطاقة ائتمانية.</p>
+</section>
+
+<!-- Download Cards -->
+<section class="download-section" style="grid-template-columns:1fr 1fr 1fr;max-width:900px">
+    <div class="dl-card">
+        <div style="background:linear-gradient(135deg,rgba(34,211,238,0.1),rgba(34,211,238,0.03));border:1px solid rgba(34,211,238,0.2);border-radius:8px;padding:4px 14px;display:inline-block;font-size:12px;font-weight:700;color:#22D3EE;margin-bottom:14px">AIR</div>
+        <h2>مِعْيَار AIR</h2>
+        <p class="dl-req">نموذج 2B — أسرع أداء<br>Windows 10/11 — 64 bit</p>
+        <a href="https://dl.meyar.ai/meyar-setup-air-windows.exe" class="dl-btn dl-btn-win">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            تحميل AIR
+        </a>
+        <span class="dl-size">~2.3 GB — مثبّت كامل</span>
+    </div>
+
+    <div class="dl-card" style="border-color:rgba(99,102,241,0.3)">
+        <div style="background:linear-gradient(135deg,rgba(99,102,241,0.15),rgba(99,102,241,0.05));border:1px solid rgba(99,102,241,0.3);border-radius:8px;padding:4px 14px;display:inline-block;font-size:12px;font-weight:700;color:#818CF8;margin-bottom:14px">PLUS</div>
+        <h2>مِعْيَار PLUS</h2>
+        <p class="dl-req">نموذج 4B — توازن مثالي<br>Windows 10/11 — 64 bit</p>
+        <a href="https://dl.meyar.ai/meyar-setup-plus-windows.exe" class="dl-btn dl-btn-win">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            تحميل PLUS
+        </a>
+        <span class="dl-size">~2.6 GB — مثبّت كامل</span>
+    </div>
+
+    <div class="dl-card">
+        <div style="background:linear-gradient(135deg,rgba(249,115,22,0.15),rgba(249,115,22,0.05));border:1px solid rgba(249,115,22,0.3);border-radius:8px;padding:4px 14px;display:inline-block;font-size:12px;font-weight:700;color:#f97316;margin-bottom:14px">MAX</div>
+        <h2>مِعْيَار MAX</h2>
+        <p class="dl-req">نموذج 9B — أعلى دقة<br>Windows 10/11 — 64 bit</p>
+        <a href="https://dl.meyar.ai/max/meyar-setup-max-windows.exe" class="dl-btn dl-btn-win">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            تحميل MAX
+        </a>
+        <span class="dl-size">~6.5 GB — مثبّت كامل (ملفات متعددة)</span>
+    </div>
+</section>
+
+<!-- Coupon Code (shown only if URL has ?code= param, otherwise hidden) -->
+<section class="coupon-section" id="coupon-section" style="display:none">
+    <div class="coupon-box">
+        <h3>كوبون التجربة المجانية</h3>
+        <p>أدخل هذا الكوبون في التطبيق بعد التسجيل لتفعيل التجربة المجانية</p>
+        <div style="position:relative;display:inline-block;cursor:pointer" onclick="copyCode()">
+            <div class="coupon-code" id="coupon-code"></div>
+            <div id="copy-hint" style="margin-top:8px;font-size:12px;color:var(--muted)">اضغط للنسخ</div>
+        </div>
+        <div id="copy-success" style="display:none;color:var(--green);font-size:13px;font-weight:700;margin-top:8px">تم النسخ!</div>
+        <p class="coupon-note">30 يوم مجانية — جميع المميزات</p>
+    </div>
+</section>
+
+<!-- Steps -->
+<section class="steps-section">
+    <h2 class="steps-title">خطوات البدء</h2>
+    <div class="steps-grid">
+        <div class="step">
+            <div class="step-num">1</div>
+            <strong>حمّل التطبيق</strong>
+            <span>اختر نظام التشغيل وحمّل المثبت</span>
+        </div>
+        <div class="step">
+            <div class="step-num">2</div>
+            <strong>ثبّت وافتح</strong>
+            <span>شغّل المثبت واتبع التعليمات</span>
+        </div>
+        <div class="step">
+            <div class="step-num">3</div>
+            <strong>سجّل حساب جديد</strong>
+            <span>التجربة المجانية تتفعل تلقائياً</span>
+        </div>
+        <div class="step">
+            <div class="step-num">4</div>
+            <strong>استمتع 30 يوم</strong>
+            <span>جميع المميزات متاحة مجاناً</span>
+        </div>
+    </div>
+</section>
+
+<!-- Features -->
+<section class="features-section">
+    <div class="features-box">
+        <h3>التجربة المجانية تشمل:</h3>
+        <div class="features-list">
+            <span>جميع الأقسام القانونية (7 أقسام)</span>
+            <span>المستشار الذكي — غير محدود</span>
+            <span>البحث المتقدم في 388+ نظام</span>
+            <span>تحليل ومراجعة العقود</span>
+            <span>صياغة المذكرات والدعاوى</span>
+            <span>تصدير Word / PDF فوري</span>
+            <span>يعمل محلياً — خصوصية 100%</span>
+            <span>لا يتطلب بطاقة ائتمانية</span>
+        </div>
+    </div>
+</section>
+
+<!-- After Trial -->
+<section class="after-trial">
+    <div class="after-trial-box">
+        <h4>بعد انتهاء التجربة المجانية</h4>
+        <p>بعد 30 يوم، يمكنك اختيار الباقة المناسبة لك والدفع للاستمرار بجميع المميزات.<br><a href="/pricing">اطلع على الباقات والأسعار</a></p>
+    </div>
+</section>
+
+<!-- Privacy -->
+<section class="privacy-badge">
+    <div class="privacy-inner">
+        <p>الذكاء الاصطناعي يعمل محلياً على جهازك — لا تُرسل بياناتك لأي سيرفر خارجي. خصوصية كاملة مضمونة.</p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-brand">مِعْيَار</div>
+    <p>
+        المعيار السعودي للقانون الذكي<br>
+        المملكة العربية السعودية<br><br>
+        <a href="mailto:support@meyar.ai">support@meyar.ai</a>
+        <span style="color:#333;margin:0 6px;">|</span>
+        <a href="https://meyar.ai">meyar.ai</a>
+    </p>
+</footer>
+
+<script>
+// Show coupon if ?code= param exists
+(function() {
+    var params = new URLSearchParams(window.location.search);
+    var code = params.get('code');
+    if (code) {
+        document.getElementById('coupon-section').style.display = '';
+        document.getElementById('coupon-code').textContent = code;
+    }
+})();
+
+function copyCode() {
+    var code = document.getElementById('coupon-code').textContent;
+    navigator.clipboard.writeText(code).then(function() {
+        document.getElementById('copy-hint').style.display = 'none';
+        document.getElementById('copy-success').style.display = '';
+        setTimeout(function() {
+            document.getElementById('copy-hint').style.display = '';
+            document.getElementById('copy-success').style.display = 'none';
+        }, 2000);
+    });
+}
+</script>
+</body>
+</html>
